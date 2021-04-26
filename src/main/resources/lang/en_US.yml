@@ -1,0 +1,249 @@
+#==================================================================#
+#                      Language & Translation                      #
+#==================================================================#
+#
+#Use %prefix%(PREFIX), %w%(WARN), %e%(ERROR), %n%(NORMAL), %s%(SUCCESS), %h%(HIGHLIGHT) as placeholder.
+#Use "/&" if you don't want it to be translated into "§".
+#
+#   en_US
+#
+
+MAIN:
+  FORMAT:
+    PREFIX: '&8&l[&a&lC&2&lL&8&l] &r'
+    WARN: '&e'
+    ERROR: '&c'
+    NORMAL: '&7'
+    SUCCESS: '&a'
+    HIGHLIGHT: '&6'
+  LOADING:
+    TITLE:
+      - '&9========================================================'
+      - '                    &b&lClass &3&lLoader                        '
+      - '&9========================================================'
+    CONFIG: '%prefix%%n%Loading configs...'
+
+    COMMAND: '%prefix%%n%Registering commands...'
+    CLASS: '%prefix%%n%Enabling external classes...'
+    FINISHED: '%prefix%%n%Plugin successfully loaded!'
+  UPDATE:
+    - '&7&m----------------------------------------------------------------'
+    - '%prefix%%n%UPDATE CHECKER : &9&l%0% &e-> &9&l%1%'
+    - '%prefix%%s%An Update Found! New features /& bug fixes, check it here:'
+    - '              &c&lwww.website.example'
+    - '&7&m----------------------------------------------------------------'
+  UPDATE_DISABLED:
+    - '%prefix%%w%Update checker was disabled in config file,'
+    - '  %w%check the website manually to make sure you have the latest update.'
+  METRIC_DISABLED: '%prefix%%w%Metric was disabled in config file.'
+  #Generic errors
+  ERROR:
+    IS_NULL: '%prefix%%e%Invalid syntax: %h%%0% %e%cannot be null!'
+    INVALID: '%prefix%%e%Invalid syntax: %h%%0% %e%is not a valid type!'
+    INVALID_ARG: '%prefix%%e%Invalid argument: %h%%0% %e% is not a valid argument!'
+    NOT_INT: '%prefix%%e%Invalid argument: %h%%0% %e%is not a integer!'
+    NOT_POSITIVE: '%prefix%%e%Invalid argument: %h%%0% %e%is not a positive number!'
+    IS_NEGATIVE: '%prefix%%e%Invalid argument: %h%%0% %e%is not a non-negative number!'
+    IS_ZERO: '%prefix%%e%Invalid argument: %h%%0% %e%is zero!'
+  NO_PERM: '%prefix%%e%You don''t have permission to do this!'
+  CONSOLE_ONLY: '%prefix%%e%This command can only be performed by console!'
+  PLAYER_ONLY: '%prefix%%e%This command can only be performed by a player!'
+  RELOAD:
+    CONFIG: '%prefix%%n%Reloading all configs...'
+    SINGLE: '%prefix%%n%Reloading %h%%0%'
+    DONE_SINGLE: '%prefix%s%File %h%%0% %s%loaded successfully.'
+    DONE: '%prefix%%h%%0% %s%files loaded successfully.'
+  SOURCE:
+    COMPILATION:
+      AUTO: '%prefix%%n%Auto compiling all source files...'
+      START: '%prefix%%n%Start compiling %h%%0% %n%...'
+      SUCCESS: '%prefix%%s%Successfully compiled %h%%0%%s%!'
+      FAILED: '%prefix%%e%Compilation failed! See console for details.'
+      INTERNAL:
+        - '%prefix%%e%Failed to compile java files! This error is occurred inside JavaCompiler.'
+        - '%prefix%%e%Error stacktrace:'
+      BAD_OPTION: '%prefix%Invalid compiling option: %h%%0%'
+  CLASS:
+    LOADING:
+      START: '%prefix%%n%Start loading %h%%0% %n%...'
+      RECENTLY: 'recently compiled classes'
+      LOADED: '%prefix%%h%%0%%s% loaded!'
+      EXISTED: '%prefix%%n%Class %h%%0%%n% has already been loaded!'
+      FAILED: '%prefix%%e%Failed to load %h%%0%%e%! See console for details.'
+    UNLOAD:
+      UNLOADED: '%prefix%%h%%0%%n% unloaded.'
+      METHOD_EXECUTION_FAILED: '%prefix%%e%Failed to run unload() for class %h%%0%%e%.'
+    RELOAD:
+      START: '%prefix%%n%Start reloading %h%%0%%n%...'
+      COMPLETE: '%prefix%%h%%0%%n% reloaded.'
+    NOT_FOUND: '%prefix%%e%Class %h%%0%%e% not found!'
+    PACKAGE_NOT_FOUND: '%prefix%%e%Package %h%%0%%e% not found!'
+    METHOD_NOT_FOUND: '%prefix%%e%Method %h%%0%%e% not found!'
+    RUN:
+      EXECUTED: '%prefix%%s%Method %h%%0%%s% executed.'
+      EXCEPTION: '%prefix%%w%An unhandled throwable %h%%0%%w% caught while executing method %h%%1%'
+      RETURN: '%n%   -> &f%0%'
+      RETURN_REG: '%n%   Reg&6%0%%n% -> &f%0%'
+    SYSINFO:
+      START: '%prefix%%n%Collecting system info...'
+      JAVA: '  %n%Java version: &e%0%'
+      OS: '  %n%OS platform: &e%0%'
+      CPU: '  %n%CPU usage from last 10s, 1min, 5min, 15min:'
+      CPU_SYSTEM: '   &8System  %s%%0%%%n% | %s%%1%%%n% | %s%%2%%%n% | %s%%3%%'
+      CPU_PROCESS: '   &8Process %s%%0%%%n% | %s%%1%%%n% | %s%%2%%%n% | %s%%3%%'
+      MEMORY: '  %n%Memory usage:'
+      MEMORY_SYSTEM: '   &8System   &f%0%GB %n%/ &f%1%GB  %n%(%s%%2%% %n%free)'
+      MEMORY_PROCESS: '   &8Process  &f%0%GB %n%/ &f%1%GB  %n%(%s%%2%% %n%free)'
+      DISK: '  %n%Disk usage: &f%0%GB %n%/ &f%1%GB  %n%(%s%%2%% %n%free)'
+    LOADED: 'loaded classes'
+  MODULE:
+    NOT_FOUND: '%prefix%%e%Module %h%%0%%e% not found!'
+    ALREADY_INSTALLED: '%prefix%%w%Module %h%%0%%w% already installed.'
+    NOT_INSTALLED: '%prefix%%w%Module %h%%0%%w% hasn''t installed.'
+    QUERY: '%prefix%%n%Querying module version list...'
+    QUERY_FAILED: '%prefix%%e%Failed to query version!'
+    ALL_VERSIONS: '%0% versions'
+  DOWNLOAD:
+    START: '%prefix%%n%Start connecting to source url...'
+    BEGIN: '%prefix%%n%Connected, start downloading %h%%0%%n%...'
+    PROGRESS: '%prefix%%h%%0%%%n% downloaded (%1%KB/s)'
+    DONE: '%prefix%%h%%0%%s% download complete!'
+    FAILED: '%prefix%%w%Failed to download %h%%0%%w%! Please download manually from %h%%1%'
+    INVALID_URL: '%prefix%%e%Failed to download %h%%0%%e%! Invalid download link or version!'
+  PID: '%prefix%Server pid is %h%%0%'
+  #File operation and errors
+  FILE:
+    ALL_FILES: 'all files in %h%%0%'
+    ALL_CLASSES: 'all classes'
+    ALL: 'all'
+    FILE: ' file(s)'
+    CLASS: ' class(es)'
+    ROOT: 'root dir'
+    DOESNT_EXIST: '%prefix%%w%File %h%%0% %w%does not exist!'
+    NO_FILE: '%prefix%%e%No %h%&l&n%0%%e% file presented in the folder!'
+    INVALID_FILE: '%prefix%%e%Invalid file type %h%%0%%e%! Expected: %h%%1%'
+    INVALID_PATH: '%prefix%%e%Invalid file path %h%%0%%e%! Should be formatted as &e/file/name'
+    NOT_FOLDER: '%prefix%%h%%0%%e% is not a folder!'
+    INFO:
+      HEADER: '%prefix%%n%Info of %h%%0%%n%:'
+      TYPE: '  %n%Type: %h%%0%'
+      PATH: '  %n%Path: &f%0%'
+      SIZE: '  %n%Size: &f%0% bytes'
+      MD5: '  %n%MD5: &f%0%'
+      LAST_MODIFIED: '  %n%Last Modified: &f%0%'
+      CLASS:
+        NAME: '  %n%Class: &e%0%'
+        LIST: '\n    %w%%0%'
+        INTERFACE: '  %n%Interface:'
+        FIELD: '  %n%Field:'
+        METHOD: '  %n%Method:'
+      JAVA:
+        CLASS: '  %n%Class: &e%0%'
+    #Display name for different type of files
+    dotJAVA: 'source file'
+    dotCLASS: 'class file'
+    DISABLE: '%prefix%%h%%0%%n% disabled.'
+    ENABLE: '%prefix%%h%%0%%n% enabled.'
+  LIST:
+    HEADER: '%prefix%%n%Listing %0%%n%:'
+    FOOTER: '%prefix%%n%Total %0% items.'
+    NOT_FOUND: '%prefix%%n%There''s no %h%%0%%n% found.'
+    OUT_OF_BOUND: '%prefix%%w%Page %h%%0%%w% is too large, max: %h%%1%'
+  DOS:
+    PREFIX: '&7&l[&6&lDOS&7&l] &r'
+    EXECUTED: '%prefix%%n%Executed DOS: %h%%0%'
+    EXECUTED_MENTION: '%prefix%%h%%0%%n% executed DOS: %h%%1%'
+    ERROR: '%prefix%%e%Error: %h%%0%'
+    TIMEOUT: '%prefix%%e%DOS operation timeout!'
+    INPUT: '%prefix%%n%« %0%'
+    OUTPUT: '%prefix%%n%» %0%'
+  EVAL:
+    PREFIX: '&8&l[&a&lEval&8&l] &7'
+    INPUT_FIRST: '%prefix%%n%« %0%'
+    INPUT: '   %n%« %0%'
+    OUTPUT: '   %n%» %0%'
+    ERR: '   %w%◇ Error:'
+    LIST_SINGLE: '   %n%▎ %0%'
+    LIST_EMPTY: '    %n%&oEmpty yet...'
+    UNKNOWN_ARG: '%prefix%%w%Unknown arguments: %h%%0%'
+    UNKNOWN_CMD: '%prefix%%w%Unknown commands: %h%%0%'
+
+#Messages for /clsloader command
+COMMAND:
+  USAGE:
+    CLSLOADER:
+      - '%prefix%%n%Usage: /clsloader <reload/class/source/sysinfo>'
+      - '    &8- %w%reload [class/all/config] %n%reload classes, configs or everything'
+      - '    &8- %w%class <...> %n%commands related to compiled classes'
+      - '    &8- %w%source <...> %n%commands related to Java source files'
+      #- '    &8- %w%file <...> %n%manage class files'
+      - '    &8- %w%sysinfo %n%show system info of server'
+    RELOAD: '%prefix%%n%Usage: /clsloader reload [class/all/config]'
+    SOURCE:
+      USAGE:
+        - '%prefix%%n%Usage: /clsloader source <compile/list/enable/disable/info>'
+        - '    &8- %w%compile <File/Folder Path> [opt] %n%compile source file(s)'
+        - '    &8- %w%list <Folder Path> [Page] %n%list all source files in a folder'
+        - '    &8- %w%enable <File/Folder Path> %n%enable a file or a folder'
+        - '    &8- %w%disable <File/Folder Path> %n%disable a file or a folder'
+        - '    &8- %w%info <File Path> %n%get info of a source file'
+      LIST: '%prefix%%n%Usage: /clsloader source list <Folder Path> [Page] %w%list all files in classes/src folder'
+      INFO: '%prefix%%n%Usage: /clsloader source info <File Path> %w%get info of a source file'
+      COMPILE:
+        - '%prefix%%n%Usage: /clsloader source compile <File/Folder Path> [options]'
+        - '    &8- %n%Compile a source file to class and load it into server'
+        - '    &8- %h%File Path%n% can be either a .class file or a folder'
+        - '    &8- %h%options%n% are the arguments for Java Compiler'
+    CLASS:
+      USAGE:
+        - '%prefix%%n%Usage: /clsloader class <list/load/unload/reload/enable/disable/run/info>'
+        - '    &8- %w%list <Package Name> [Page] %n%list all class files in a folder'
+        - '    &8- %w%load <Class/Package Name> %n%load a class file to server'
+        - '    &8- %w%unload <Class/Package Name> %n%unload a class'
+        - '    &8- %w%reload <Class/Package Name> %n%reload all classes in a package'
+        - '    &8- %w%enable <Class/Package Name> %n%enable a class or a package'
+        - '    &8- %w%disable <Class/Package Name> %n%disable a class or a package'
+        - '    &8- %w%run <Class Name> <Method Name> %n%run a non-param method of a class'
+        - '    &8- %w%info <Class Name> %n%get info of a class'
+      RUN:
+        - '%prefix%%n%Usage: /clsloader class run <Class Name> <Method Name> [args] %w%'
+        - '    &8- %n%Run a method in class, can only execute non-param method and '
+        - '    &8- %n%single-param method with a String array.'
+        - '    &8- %n%For example, run main method, /cl class run *name* main arg1 arg2'
+      LIST: '%prefix%%n%Usage: /clsloader class list <Package Name> [Page] %w%list all files in classes/compiled folder'
+      LOAD: '%prefix%%n%Usage: /clsloader class load <Class/Package Name> %w%load a class'
+      UNLOAD: '%prefix%%n%Usage: /clsloader class unload <Class/Package Name> %w%unload a class or all classes under package'
+      RELOAD: '%prefix%%n%Usage: /clsloader class reload <Class/Package Name> %w%reload a class or all classes under package'
+      INFO: '%prefix%%n%Usage: /clsloader class info <Class Name> %w%get info of a class'
+      DISABLE: '%prefix%%n%Usage: /clsloader class disable <Class/Package Name> disable a class or a package'
+      ENABLE: '%prefix%%n%Usage: /clsloader class enable <Class/Package Name> enable a class or a package'
+    MODULE:
+      USAGE:
+        - '%prefix%%n%Usage: /clsloader module <download/remove>'
+        - '    &8- %w%download <Module Name> %n%download a module'
+        - '    &8- %w%remove <Module Name> %n%remove a module'
+#    FILE:
+#      USAGE:
+#        - '%prefix%%n%Usage: /Usage: /clsloader file <info/cd/copy/move/del/rd/mkdir/create>'
+#        - '    &8- %w%info <File/Folder Path> %n%get info of a file or directory'
+#        - '    &8- %w%cd <Folder Path> %n%change operating directory'
+#        - '    &8- %w%copy <File/Folder Path> <Folder Path> %n%copy a file or folder to another one.'
+#        - '    &8- %w%move <File/Folder Path> <Folder Path> %n%move a file or folder to another one.'
+#        - '    &8- %w%del <File/Folder Path> %n%delete a file or all files in a folder'
+#        - '    &8- %w%rd <Folder Path> %n%delete a folder'
+    DOS:
+      - '%prefix%%n%Usage: /%0% <Cmd/Input...>'
+      - '    &8- %n%Execute a terminal command of OS, or input a variable to '
+      - '    &8- %n%a running process that waiting for maximum of 60 seconds.'
+      - '    &8- %w%This command can only be executed via console, or by op if'
+      - '    &8- %h%ingame_code_privilege%w% is enabled in config for'
+      - '    &8- %w%security reasons.'
+    EVAL:
+      - '%prefix%%n%Usage: /%0% <Java code/JShell cmd>'
+      - '    &8- %n%Evaluate a Java code segment, just like writing a Java program'
+      - '    &8- %n%For details, visit https://docs.oracle.com/javase/9/jshell/snippets.htm'
+      - '    &8- %n%This command can only be executed via console, or by op and'
+      - '    &8- %w%command block if %h%ingame_code_privilege%w% is enabled in config for'
+      - '    &8- %n%security reasons.'
+#'    &8- %w%cmd %n%dsc'
+#'    &8- %n%'

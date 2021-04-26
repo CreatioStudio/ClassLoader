@@ -1,0 +1,30 @@
+#==================================================================#
+#                        Main Configuration                        #
+#==================================================================#
+
+#DON'T TOUCH THIS!
+version: 1
+
+#Language
+language: en_US
+
+#Update Checker
+enable_update_checker: true
+
+#Metrics, which collects anonymous data for the developer.
+enable_metrics: true
+
+#Allows op and command block to execute /dos and /eval, which basically grants
+#full access to your computer/server (create, modify and delete files, start another
+#process for example). Set to false means only console can do this command.
+#Since these two commands are too powerful, there's no way for non-op user to use them.
+#Be cautious that you shouldn't use them as a part of productive, like making /eval
+#to a quick calculator for players.
+#Ignore this if you don't know what it actually is!
+ingame_code_privilege: false
+
+#Auto compile all .java files in java_class folder when server start/restart.
+auto_compile_java_files: false
+
+#Allow command block execute /classloader command
+allow_command_block_execute: true

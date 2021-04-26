@@ -1,0 +1,42 @@
+//package test.example;
+
+import org.bukkit.plugin.java.JavaPlugin;
+
+/**
+ * Example external Java file, can be load and unload in-game
+ * just like a script.
+ * The file can be compiled through op command
+ *      "/classloader source compile <FileName>"
+ *
+ * Method load(JavaPlugin) and unload(JavaPlugin) execute when
+ * class load and unload.
+ *
+ * @param plugin gives JavaPlugin object, which can be used
+ * to register events or something else.
+ *
+ * *Always gives logic to clear all instance of this class in
+ * unload() method*
+ * Otherwise the class might not be able to reload completely
+ * due to java's feature.
+ *
+ * Events & BukkitTasks registered using given JavaPlugin object
+ * is able to unregister automatically when class is reloading.
+ */
+public class Example {
+
+    public void load(JavaPlugin plugin) {
+        System.out.println("EXTERNAL CLASS: Hello world!");
+    }
+
+    public void unload(JavaPlugin plugin) {
+        System.out.println("EXTERNAL CLASS: Goodbye world!");
+    }
+
+    /**
+     * Method that has only String[] or String... param or non-param method can be executed
+     * directly through command like "/classloader class run Example main argument1 argument2"
+     */
+    public static void main(String[] args) {
+        System.out.println("Well, good!");
+    }
+}
