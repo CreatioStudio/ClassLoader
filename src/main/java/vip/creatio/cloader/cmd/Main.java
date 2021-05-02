@@ -12,7 +12,7 @@ import vip.creatio.cloader.exception.CommandNumberFormatException;
 import org.bukkit.command.*;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import vip.creatio.common.ArrayUtil;
+import vip.creatio.common.util.ArrayUtil;
 
 import java.io.File;
 import java.io.FileNotFoundException;

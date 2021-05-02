@@ -5,7 +5,7 @@ import vip.creatio.cloader.ccl.module.Module;
 import com.sun.management.OperatingSystemMXBean;
 import org.bukkit.Bukkit;
 import org.jetbrains.annotations.NotNull;
-import vip.creatio.common.ArrayUtil;
+import vip.creatio.common.util.ArrayUtil;
 
 import java.io.*;
 import java.lang.management.ManagementFactory;
