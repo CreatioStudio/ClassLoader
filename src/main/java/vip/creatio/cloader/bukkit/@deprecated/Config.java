@@ -1,8 +1,9 @@
-package vip.creatio.cloader.bukkit;
+package vip.creatio.cloader.bukkit.deprecated;
 
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
+import vip.creatio.cloader.bukkit.CLoader;
 
 import java.io.*;
 import java.util.Arrays;

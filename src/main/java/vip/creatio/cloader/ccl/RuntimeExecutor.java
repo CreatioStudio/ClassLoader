@@ -41,7 +41,7 @@ public class RuntimeExecutor extends Thread
                         CommandSender sender = lastOperator.get();
                         CLoader.getMsgSender().sendStatic(
                                 sender,
-                                "MAIN.DOS.TIMEOUT");
+                                "MAIN.TERM.TIMEOUT");
                         proc = null;
                         lastOperator = new AtomicReference<>();
                     }
@@ -181,7 +181,7 @@ public class RuntimeExecutor extends Thread
         for (String str : msg)
         {
             System.out.println("output: " + str);
-            CLoader.getMsgSender().sendStatic(lastOperator.get(), "MAIN.DOS.OUTPUT", str);
+            CLoader.getMsgSender().sendStatic(lastOperator.get(), "MAIN.TERM.OUTPUT", str);
         }
     }
 }

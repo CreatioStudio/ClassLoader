@@ -1,5 +1,5 @@
 name: ClassLoader-Virtual
 version: 0v
-main: com.henryrenyz.cloader.bukkit.ExternalPlugin
+main: vip.creatio.cloader.bukkit.ExternalPlugin
 api-version: 1.13
 description: Virtual plugin for external classes.

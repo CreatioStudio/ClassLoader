@@ -88,6 +88,7 @@ MAIN:
       START: '%prefix%%n%Collecting system info...'
       JAVA: '  %n%Java version: &e%0%'
       OS: '  %n%OS platform: &e%0%'
+      PID: '  %n%Process ID: &e%0%'
       CPU: '  %n%CPU usage from last 10s, 1min, 5min, 15min:'
       CPU_SYSTEM: '   &8System  %s%%0%%%n% | %s%%1%%%n% | %s%%2%%%n% | %s%%3%%'
       CPU_PROCESS: '   &8Process %s%%0%%%n% | %s%%1%%%n% | %s%%2%%%n% | %s%%3%%'
@@ -110,7 +111,7 @@ MAIN:
     DONE: '%prefix%%h%%0%%s% download complete!'
     FAILED: '%prefix%%w%Failed to download %h%%0%%w%! Please download manually from %h%%1%'
     INVALID_URL: '%prefix%%e%Failed to download %h%%0%%e%! Invalid download link or version!'
-  PID: '%prefix%Server pid is %h%%0%'
+  PID: '%prefix%%n%Server pid is %h%%0%'
   #File operation and errors
   FILE:
     ALL_FILES: 'all files in %h%%0%'
@@ -123,6 +124,7 @@ MAIN:
     NO_FILE: '%prefix%%e%No %h%&l&n%0%%e% file presented in the folder!'
     INVALID_FILE: '%prefix%%e%Invalid file type %h%%0%%e%! Expected: %h%%1%'
     INVALID_PATH: '%prefix%%e%Invalid file path %h%%0%%e%! Should be formatted as &e/file/name'
+    SINGLE_ONLY: '%prefix%%e%Only a single element is available here!'
     NOT_FOLDER: '%prefix%%h%%0%%e% is not a folder!'
     INFO:
       HEADER: '%prefix%%n%Info of %h%%0%%n%:'
@@ -145,16 +147,16 @@ MAIN:
     DISABLE: '%prefix%%h%%0%%n% disabled.'
     ENABLE: '%prefix%%h%%0%%n% enabled.'
   LIST:
-    HEADER: '%prefix%%n%Listing %0%%n%:'
+    HEADER: '%prefix%%n%Listing %0% page of %h%%1%%n%:'
     FOOTER: '%prefix%%n%Total %0% items.'
     NOT_FOUND: '%prefix%%n%There''s no %h%%0%%n% found.'
     OUT_OF_BOUND: '%prefix%%w%Page %h%%0%%w% is too large, max: %h%%1%'
-  DOS:
-    PREFIX: '&7&l[&6&lDOS&7&l] &r'
-    EXECUTED: '%prefix%%n%Executed DOS: %h%%0%'
-    EXECUTED_MENTION: '%prefix%%h%%0%%n% executed DOS: %h%%1%'
+  TERM:
+    PREFIX: '&7&l[&6&lTERM&7&l] &r'
+    EXECUTED: '%prefix%%n%Executed terminal: %h%%0%'
+    EXECUTED_MENTION: '%prefix%%h%%0%%n% executed terminal: %h%%1%'
     ERROR: '%prefix%%e%Error: %h%%0%'
-    TIMEOUT: '%prefix%%e%DOS operation timeout!'
+    TIMEOUT: '%prefix%%e%Terminal operation timeout!'
     INPUT: '%prefix%%n%« %0%'
     OUTPUT: '%prefix%%n%» %0%'
   EVAL:
@@ -162,7 +164,7 @@ MAIN:
     INPUT_FIRST: '%prefix%%n%« %0%'
     INPUT: '   %n%« %0%'
     OUTPUT: '   %n%» %0%'
-    ERR: '   %w%◇ Error:'
+    ERR: '   %w%◇ Error:%e%'
     LIST_SINGLE: '   %n%▎ %0%'
     LIST_EMPTY: '    %n%&oEmpty yet...'
     UNKNOWN_ARG: '%prefix%%w%Unknown arguments: %h%%0%'

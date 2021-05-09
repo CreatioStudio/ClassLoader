@@ -184,7 +184,7 @@ class JavaImpl extends ModuleImpl {
                     Method m = cls.getMethod("load", JavaPlugin.class);
                     if (Modifier.isStatic(m.getModifiers())) m.invoke(null, CLoader.getInstance().getVirtual());
                 } catch (NoSuchMethodException ignored) {
-                } catch (InvocationTargetException | IllegalAccessException | NullPointerException e) {
+                } catch (Throwable e) {
                     msg.intern("Failed to run load() method for class " + cls.getTypeName());
                     if (e instanceof InvocationTargetException) e.getCause().printStackTrace();
                     else e.printStackTrace();
@@ -222,7 +222,7 @@ class JavaImpl extends ModuleImpl {
             Method m = clazz.getMethod("unload", JavaPlugin.class);
             if (Modifier.isStatic(m.getModifiers())) m.invoke(null, CLoader.getInstance());
         } catch (NoSuchMethodException ignored) {
-        } catch (InvocationTargetException | IllegalAccessException | NullPointerException e) {
+        } catch (Throwable e) {
             msg.intern("Failed to run unload() method for class " + clazz.getTypeName());
             if (e instanceof InvocationTargetException) re = new RuntimeException(e.getCause());
             else re = new RuntimeException(e);
@@ -402,7 +402,7 @@ class JavaImpl extends ModuleImpl {
 
         @Override
         public String[] reportDiagnostic() {
-            List<String> str = new ArrayList<>(Arrays.asList(msg.fromPath("MAIN.SOURCE.COMPILATION.FAILED")));
+            List<String> str = new ArrayList<>(Arrays.asList(msg.getList("MAIN.SOURCE.COMPILATION.FAILED")));
             File src = null;
             BufferedReader rd;
             int ctr = 0;

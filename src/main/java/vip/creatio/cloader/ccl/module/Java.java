@@ -80,11 +80,11 @@ public class Java extends Module {
             //msg start compiling
             msg.addAll(message1("MAIN.SOURCE.COMPILATION.START",
                     listFileCrafter0(3, sf.toArray(new File[0])),
-                    Module.msg.fromPath("MAIN.FILE.FILE")[0]));
+                    Module.msg.getList("MAIN.FILE.FILE")[0]));
 
             //start compiling
             CompilationTask task = impl.compile(FileManager.COMPILED);
-            task.setOptions(options);
+            if (options != null) task.setOptions(options);
             boolean succeed = task.compile(sf.toArray(new ScriptFile[0]));
 
             //success detection and loading
@@ -95,7 +95,7 @@ public class Java extends Module {
                 msg.addAll(message1("MAIN.SOURCE.COMPILATION.SUCCESS",
                         listFileCrafter0(3, sf.toArray(new File[0]))));
                 msg.addAll(message1("MAIN.CLASS.LOADING.START",
-                        Module.msg.fromPath("MAIN.CLASS.LOADING.RECENTLY")));
+                        Module.msg.getList("MAIN.CLASS.LOADING.RECENTLY")));
 
                 List<ClassFile> load = new LinkedList<>();
 
@@ -274,7 +274,7 @@ public class Java extends Module {
     }
 
     private static String[] message0(String path, String... vars) {
-        return msg.fromPath(path, vars);
+        return msg.getList(path, vars);
     }
 
     static List<ClassFile> getCompiledClassFile(ScriptFile java) {
@@ -350,15 +350,15 @@ public class Java extends Module {
     //TODO: temp
 
     public static String listFileCrafter0(int max, File... items) {
-        return listItemCrafter0(File::getName, max, msg.fromPath("MAIN.FILE.FILE")[0], items);
+        return listItemCrafter0(File::getName, max, msg.getSingle("MAIN.FILE.FILE"), items);
     }
 
     public static String listClassCrafter0(int max, Class<?>... classes) {
-        return listItemCrafter0(Class::getTypeName, max, msg.fromPath("MAIN.FILE.CLASS")[0], classes);
+        return listItemCrafter0(Class::getTypeName, max, msg.getSingle("MAIN.FILE.CLASS"), classes);
     }
 
     public static String listClassCrafter1(int max, ClassFile... classes) {
-        return listItemCrafter0(ClassFile::getClassName, max, msg.fromPath("MAIN.FILE.CLASS")[0], classes);
+        return listItemCrafter0(ClassFile::getClassName, max, msg.getSingle("MAIN.FILE.CLASS"), classes);
     }
 
     @SafeVarargs

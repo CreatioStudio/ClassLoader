@@ -1,6 +1,6 @@
 package vip.creatio.cloader.ccl.module;
 
-import vip.creatio.clib.basic.tools.FormatMsgManager;
+import vip.creatio.basic.tools.FormatMsgManager;
 import vip.creatio.cloader.bukkit.CLoader;
 import org.bukkit.command.CommandSender;
 
